@@ -1,0 +1,88 @@
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+.hidden {
+	display: none;
+}
+
+#pageLoader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.15);
+	z-index: 9999;
+	/* Add animation to the spinner */
+	display: grid;
+}
+
+#pageLoader .loading {
+	place-self: center;
+	width: 50%;
+	min-width: 180px;
+	max-width: 500px;
+	aspect-ratio: 1/1;
+	border: 20px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	border-top-color: #fff;
+	animation: spin 1.5s ease-in-out infinite;
+	transition: 0.5s opacity;
+}
+
+
+#pageLoader .loadingTitle {
+	text-align: center;
+	color: white;
+	font-size: 24px;
+}
+
+#pageLoader .loadingInfoContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(0, 0, 0, 0.75);
+	padding: 20px;
+	border-radius: 8px;
+	text-align: center;
+	z-index: 2; /* Ensure the info container is above the spinner */
+}
+
+#pageLoader .loadingOptions {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	z-index: 10000;
+}
+
+#pageLoader .loadingCancel,
+#pageLoader .loadingRetry,
+#pageLoader .loadingClose {
+	background-color: #3498db;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	margin: 0 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+}
+
+#pageLoader .loadingCancel:hover,
+#pageLoader .loadingRetry:hover,
+#pageLoader .loadingClose:hover {
+	background-color: #2980b9;
+}
+
+#pageLoader .loadingRetry,
+#pageLoader .loadingClose {
+	display: none;
+}
+
+#pageLoader.connection-lost {
+	/* Styles for the "Connection Lost" state */
+	background-color: rgba(255, 0, 0, 0.8);
+	/* Other styles for the "Connection Lost" state */
+}
