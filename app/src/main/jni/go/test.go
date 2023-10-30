@@ -22,7 +22,6 @@ func GoInteger() int {
 }
 //export Run
 func Run() {
-    createIndexFile()
     //ListCurrentDirectory()
 
     println("Starting webserver...")
@@ -46,11 +45,53 @@ func createIndexFile() {
         background: lightblue;
         font-size: 1.65rem;
         padding: 10px;
+        min-height: 100%;
     }
 </style>
+<script>
+window.setTimeout(()=>{
+    alert("Velkommen til Bekview Android!")
+},1000);
+
+</script>
 </head>
 <body>
-    The Go server is running! (#995)
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
+    The Go server is running!<br>
 </body>
 </html>
 `
@@ -66,6 +107,7 @@ func createIndexFile() {
 
 
 func handler(w http.ResponseWriter, r *http.Request) {
+    createIndexFile()
 	data, err := ioutil.ReadFile("/data/data/beksoft.project.bekview/files/index.html")
 	if err != nil {
 		http.Error(w, "Could not read index.html", http.StatusInternalServerError)
