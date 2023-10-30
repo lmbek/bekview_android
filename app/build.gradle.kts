@@ -6,22 +6,27 @@ android {
     namespace = "beksoft.project.bekview"
     compileSdk = 34
 
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+
     defaultConfig {
         applicationId = "beksoft.project.bekview"
-        minSdk = 31
+        minSdk = 29
         targetSdk = 31
         versionCode = 1
         versionName = "1.0"
 
         ndk {
-            abiFilters.add("x86_64") // arm64-v8a
+            //abiFilters.add("x86_64") // For PC (runtime test)
+            abiFilters.add("arm64-v8a") // For Android (runtime test)
         }
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        //testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -46,7 +51,6 @@ android {
 }
 
 dependencies {
-
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
