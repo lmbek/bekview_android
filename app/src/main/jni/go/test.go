@@ -56,6 +56,9 @@ window.setTimeout(()=>{
 </script>
 </head>
 <body>
+    The Go server is running! 1<br>
+    The Go server is running! 2<br>
+    The Go server is running! 3<br>
     The Go server is running!<br>
     The Go server is running!<br>
     The Go server is running!<br>
@@ -78,15 +81,12 @@ window.setTimeout(()=>{
     The Go server is running!<br>
     The Go server is running!<br>
     The Go server is running!<br>
+    The Go server is running! 4<br>
     The Go server is running!<br>
     The Go server is running!<br>
     The Go server is running!<br>
     The Go server is running!<br>
-    The Go server is running!<br>
-    The Go server is running!<br>
-    The Go server is running!<br>
-    The Go server is running!<br>
-    The Go server is running!<br>
+    The Go server is running! 5<br>
     The Go server is running!<br>
     The Go server is running!<br>
     The Go server is running!<br>
